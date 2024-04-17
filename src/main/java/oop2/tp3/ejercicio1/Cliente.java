@@ -5,6 +5,7 @@ import java.util.List;
 
 public class Cliente {
     private List<Alquiler> alquileres = new ArrayList<Alquiler>();
+    @SuppressWarnings("unused")
     private String name;
 
     public Cliente(String nombre) {
@@ -17,7 +18,7 @@ public class Cliente {
         int puntosAlquilerFrecuente = 0;
         for (Alquiler alquiler : alquileres) {
             double monto = 0;
-// determine amounts for each line
+            // determine amounts for each line
             switch (alquiler.copia().libro().codigoPrecio()) {
                 case Libro.REGULARES:
                     monto += 2;
