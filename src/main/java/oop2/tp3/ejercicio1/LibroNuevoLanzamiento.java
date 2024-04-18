@@ -7,4 +7,11 @@ public class LibroNuevoLanzamiento extends Libro {
 
     }
 
+    @Override
+    public double calcularMonto(int diasAlquilados) {
+        int monto = 0;
+        monto += diasAlquilados * 3;
+        return monto;
+    }
+
 }

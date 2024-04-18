@@ -19,4 +19,6 @@ public abstract class Libro {
     public String nombre() {
         return nombre;
     }
+
+    public abstract double calcularMonto(int diasAlquilados);
 }

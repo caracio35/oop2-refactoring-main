@@ -4,7 +4,15 @@ public class LibroInfantiles extends Libro {
 
     public LibroInfantiles(String nombre) {
         super(nombre, Libro.INFANTILES);
-        // TODO Auto-generated constructor stub
+    }
+
+    @Override
+    public double calcularMonto(int diasAlquilados) {
+        int monto = 0;
+        monto += 2;
+        if (diasAlquilados > 2)
+            monto += (diasAlquilados - 2) * 1.5;
+        return monto;
     }
 
 }
