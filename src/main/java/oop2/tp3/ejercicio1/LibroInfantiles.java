@@ -15,4 +15,9 @@ public class LibroInfantiles extends Libro {
         return monto;
     }
 
+    @Override
+    public int plusNuevoLanzamiento(int diasAlquilados) {
+        return 0;
+    }
+
 }

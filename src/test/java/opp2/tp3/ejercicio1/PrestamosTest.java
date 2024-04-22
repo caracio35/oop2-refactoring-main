@@ -17,7 +17,7 @@ public class PrestamosTest {
 
     @Test
     public void prestamoLibRegular() {
-        var elTunel = new LibroRegular("El Túnel regular");
+        Libro elTunel = new LibroRegular("El Túnel regular");
         CopiaLibro elTunelRegCopia = new CopiaLibro(elTunel);
         Alquiler alquilerElTunel = new Alquiler(elTunelRegCopia, 5);
         Cliente yo = new Cliente("Javier");
@@ -25,12 +25,13 @@ public class PrestamosTest {
         Object[] resultado = yo.calcularDeudaYPuntosObtenidos();
         assertEquals(6.5, resultado[0]);
         assertEquals(1, resultado[1]);
+        System.out.println(elTunel.nombre());
 
     }
 
     @Test
     public void prestamoLibInfantil() {
-        var elTunel = new LibroInfantiles("El Túnel infantil");
+        Libro elTunel = new LibroInfantiles("El Túnel infantil");
         CopiaLibro elTunelInfCopia = new CopiaLibro(elTunel);
         Alquiler alquilerElTunel = new Alquiler(elTunelInfCopia, 5);
         Cliente yo = new Cliente("Javier");
@@ -43,7 +44,7 @@ public class PrestamosTest {
 
     @Test
     public void prestamoLibNuevoLanzamiento() {
-        var elTunel = new LibroNuevoLanzamiento("El Túnel nuevo lanzamiento");
+        Libro elTunel = new LibroNuevoLanzamiento("El Túnel nuevo lanzamiento");
         CopiaLibro elTunelNLCopia = new CopiaLibro(elTunel);
         Alquiler alquilerElTunel = new Alquiler(elTunelNLCopia, 5);
         Cliente yo = new Cliente("Javier");
@@ -56,8 +57,8 @@ public class PrestamosTest {
 
     @Test
     public void prestamosMultiples() {
-        var elTunel = new LibroRegular("El Túnel");
-        var antesDelFin = new LibroRegular("Antes del Fin");
+        Libro elTunel = new LibroRegular("El Túnel");
+        Libro antesDelFin = new LibroRegular("Antes del Fin");
         CopiaLibro elTunelCopia = new CopiaLibro(elTunel);
         CopiaLibro antesDelFinCopia = new CopiaLibro(antesDelFin);
         Alquiler alquilerElTunel = new Alquiler(elTunelCopia, 5);
@@ -68,7 +69,7 @@ public class PrestamosTest {
         Object[] resultado = yo.calcularDeudaYPuntosObtenidos();
         assertEquals(10.0, resultado[0]);
         assertEquals(2, resultado[1]);
-        Main.main(null);
+
     }
 
 }

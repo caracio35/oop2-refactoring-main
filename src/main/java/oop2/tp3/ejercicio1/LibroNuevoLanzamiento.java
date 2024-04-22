@@ -14,4 +14,13 @@ public class LibroNuevoLanzamiento extends Libro {
         return monto;
     }
 
+    @Override
+    public int plusNuevoLanzamiento(int diasAlquilados) {
+        if (diasAlquilados > 1) {
+            return 1;
+        }
+
+        return 0;
+    }
+
 }

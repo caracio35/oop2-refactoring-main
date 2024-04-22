@@ -23,4 +23,9 @@ public class LibroRegular extends Libro {
 
     }
 
+    @Override
+    public int plusNuevoLanzamiento(int diasAlquilados) {
+        return 0;
+    }
+
 }

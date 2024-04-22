@@ -21,4 +21,6 @@ public abstract class Libro {
     }
 
     public abstract double calcularMonto(int diasAlquilados);
+
+    public abstract int plusNuevoLanzamiento(int diasAlquilados);
 }
