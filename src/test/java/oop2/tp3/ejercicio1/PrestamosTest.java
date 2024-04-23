@@ -1,4 +1,4 @@
-package opp2.tp3.ejercicio1;
+package oop2.tp3.ejercicio1;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
