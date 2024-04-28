@@ -73,5 +73,4 @@ public class Recaudacion {
                 .collect(Collectors.toList());
         return results;
     }
-
 }

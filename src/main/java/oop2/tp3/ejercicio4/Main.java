@@ -5,7 +5,7 @@ import org.jdbi.v3.core.Jdbi;
 public class Main {
 
     public static void main(String[] args) {
-
+        // optional
         Jdbi jdbi = Jdbi.create("jdbc:hsqldb:mem;create=true");
 
         new SetUpDatabase(jdbi).setUp();
@@ -20,8 +20,11 @@ public class Main {
         }
 
         var persona = repo.buscarId(1L);
-        if (persona != null) {
-            System.out.println(persona.nombre() + " " + persona.apellido());
-        }
+        persona.ifPresent(Persona -> System.out.println(persona.get().nombre() + " "
+                + persona.get().apellido()));
+
+        // if (persona != null) {
+        // System.out.println(persona.nombre() + " " + persona.apellido());
+        // }
     }
 }
