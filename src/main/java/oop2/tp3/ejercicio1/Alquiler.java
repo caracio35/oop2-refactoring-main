@@ -23,7 +23,7 @@ public class Alquiler {
 
     public Double calcularMonto() {
 
-        return this.copia.libro().calcularMonto(diasAlquilados);
+        return this.copia.calcularMonto(diasAlquilados);
 
     }
 }
