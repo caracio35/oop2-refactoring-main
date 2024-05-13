@@ -20,8 +20,7 @@ public class Main {
         }
 
         var persona = repo.buscarId(1L);
-        persona.ifPresent(Persona -> System.out.println(persona.get().nombre() + " "
-                + persona.get().apellido()));
+        persona.ifPresent(p -> System.out.println(p.nombre() + " " + p.apellido()));
 
         // if (persona != null) {
         // System.out.println(persona.nombre() + " " + persona.apellido());
